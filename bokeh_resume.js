@@ -1,5 +1,4 @@
 
-<script type="text/javascript">
     (function() {
           const fn = function() {
             Bokeh.safely(function() {
@@ -34,4 +33,3 @@
           if (document.readyState != "loading") fn();
           else document.addEventListener("DOMContentLoaded", fn);
         })();
-</script>
