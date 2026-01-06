@@ -4,33 +4,33 @@
 
 :root {
   /* Header colors (dark) */
-  --header-bg: #333333;
-  --header-logo: #ebebeb;
-  --header-nav: #969696;
-  --header-nav-hover: #ebebeb;
+  --header-bg: #2a2a2a;
+  --header-logo: #f5f4f2;
+  --header-nav: #a8a8a8;
+  --header-nav-hover: #f5f4f2;
   
-  /* Content colors (light) */
-  --content-bg: #ffffff;
-  --content-text: #000000;
-  --content-muted: #666666;
-  --content-border: #e5e5e5;
+  /* Content colors (warm) */
+  --content-bg: #faf9f7;
+  --content-text: #1a1a1a;
+  --content-muted: #6b6b6b;
+  --content-border: #e8e6e3;
   
   /* Footer (matching header) */
-  --footer-bg: #333333;
-  --footer-text: #ebebeb;
-  --footer-muted: #969696;
+  --footer-bg: #2a2a2a;
+  --footer-text: #f5f4f2;
+  --footer-muted: #a8a8a8;
   
   /* Typography */
-  --font-size-base: 18px;
+  --font-size-base: 19px;
   --font-size-small: 14px;
-  --font-size-h1: 42px;
+  --font-size-h1: 38px;
   --font-size-h2: 28px;
-  --line-height-body: 1.7;
-  --line-height-heading: 1.2;
+  --line-height-body: 1.75;
+  --line-height-heading: 1.25;
   
   /* Spacing */
-  --content-max-width: 720px;
-  --section-padding: 80px;
+  --content-max-width: 680px;
+  --section-padding: 96px;
   --element-gap: 24px;
   --page-padding-x: 24px;
 }
@@ -43,15 +43,17 @@
 
 html {
   scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 body {
   background-color: var(--content-bg);
   color: var(--content-text);
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   font-size: var(--font-size-base);
   line-height: var(--line-height-body);
   min-height: 100vh;
+  letter-spacing: -0.01em;
 }
 
 a {
@@ -61,13 +63,14 @@ a {
 }
 
 a:hover {
-  opacity: 0.7;
+  opacity: 0.65;
 }
 
 h1, h2, h3, h4, h5, h6 {
   line-height: var(--line-height-heading);
-  font-weight: 700;
+  font-weight: 600;
   color: var(--content-text);
+  letter-spacing: -0.02em;
 }
 
 h1 {
@@ -83,10 +86,10 @@ input, textarea {
   background: var(--content-bg);
   border: 1px solid var(--content-border);
   color: var(--content-text);
-  padding: 12px 16px;
-  font-size: 16px;
+  padding: 14px 18px;
+  font-size: 17px;
   width: 100%;
-  border-radius: 4px;
+  border-radius: 3px;
   font-family: inherit;
   transition: border-color 0.2s ease;
 }
@@ -114,21 +117,22 @@ button {
 }
 
 .prose p {
-  margin-bottom: 24px;
+  margin-bottom: 28px;
 }
 
 .prose a {
   color: var(--content-text);
   text-decoration: underline;
-  text-underline-offset: 2px;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
 }
 
 .prose a:hover {
-  opacity: 0.7;
+  opacity: 0.65;
 }
 
 .prose strong {
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .prose em {
@@ -136,9 +140,9 @@ button {
 }
 
 .prose blockquote {
-  border-left: 3px solid var(--content-border);
-  padding-left: 20px;
-  margin: 32px 0;
+  border-left: 2px solid var(--content-border);
+  padding-left: 24px;
+  margin: 36px 0;
   font-style: italic;
   color: var(--content-muted);
 }
@@ -153,61 +157,62 @@ button {
 .prose img {
   width: 100%;
   height: auto;
-  margin: 32px 0;
+  margin: 36px 0;
 }
 
 .prose figure {
-  margin: 32px 0;
+  margin: 36px 0;
 }
 
 .prose figcaption {
   font-size: var(--font-size-small);
   color: var(--content-muted);
-  margin-top: 8px;
+  margin-top: 12px;
 }
 
 .prose ul {
-  margin: 24px 0;
+  margin: 28px 0;
   padding-left: 24px;
   list-style-type: disc;
 }
 
 .prose ol {
-  margin: 24px 0;
+  margin: 28px 0;
   padding-left: 24px;
   list-style-type: decimal;
 }
 
 .prose li {
   margin-bottom: 12px;
-  line-height: 1.6;
+  line-height: 1.65;
 }
 
 .prose h6 {
   font-size: 16px;
-  font-weight: bold;
+  font-weight: 600;
   line-height: 1.5;
   padding: 20px;
   border: 1px solid var(--content-border);
-  margin: 32px 0;
+  margin: 36px 0;
 }
 
 .prose hr {
   border: none;
   border-top: 1px solid var(--content-border);
-  margin: 48px 0;
+  margin: 56px 0;
 }
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
   :root {
-    --font-size-h1: 32px;
+    --font-size-base: 18px;
+    --font-size-h1: 30px;
     --font-size-h2: 24px;
-    --section-padding: 48px;
+    --section-padding: 56px;
   }
   
   h1 {
-    font-size: 32px;
+    font-size: 30px;
   }
   
   h2 {

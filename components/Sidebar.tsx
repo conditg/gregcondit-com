@@ -14,10 +14,10 @@ export default function Sidebar({
   caption,
 }: SidebarProps) {
   return (
-    <aside className="w-full md:w-2/5 md:pl-12">
+    <aside className="w-full md:w-1/4 md:pl-8">
       <div className="sticky top-8">
         {/* Profile Image */}
-        <div className="relative aspect-square w-full max-w-xs mx-auto md:mx-0 rounded-lg overflow-hidden">
+        <div className="relative aspect-square w-full max-w-[200px] mx-auto md:mx-0 rounded-lg overflow-hidden">
           <Image
             src={imageSrc}
             alt={imageAlt}

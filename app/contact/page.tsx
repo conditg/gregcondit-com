@@ -12,45 +12,14 @@ export default function ContactPage() {
     <div className="max-w-content mx-auto px-page-x py-section">
       <div className="flex flex-col-reverse md:flex-row gap-12">
         {/* Main Content */}
-        <div className="md:w-3/5">
-          <h1 className="text-h1 font-bold mb-8 text-content-text">Get in touch</h1>
+        <div className="md:w-3/4">
+          <h1 className="text-h1 font-semibold mb-8 text-content-text tracking-tight">Get in touch</h1>
           
           <div className="space-y-6 text-lg leading-relaxed text-content-text">
-            <p>
-              I&apos;m always happy to connect with interesting people. The best ways 
-              to reach me are:
-            </p>
-            
-            {/* LinkedIn */}
-            <div className="flex items-start gap-4 p-6 border border-content-border rounded-lg hover:border-content-muted transition-colors">
-              <svg
-                className="w-8 h-8 flex-shrink-0 mt-0.5 text-content-text"
-                fill="currentColor"
-                viewBox="0 0 24 24"
-                aria-hidden="true"
-              >
-                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
-              </svg>
-              <div>
-                <h2 className="text-xl font-bold mb-1 text-content-text">LinkedIn</h2>
-                <p className="text-content-muted mb-3">
-                  Best for professional inquiries and networking.
-                </p>
-                <a
-                  href="https://www.linkedin.com/in/gregcondit/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-content-text hover:opacity-70 transition-opacity"
-                >
-                  Connect on LinkedIn <span aria-hidden="true">→</span>
-                </a>
-              </div>
-            </div>
-
             {/* Email */}
-            <div className="flex items-start gap-4 p-6 border border-content-border rounded-lg hover:border-content-muted transition-colors">
+            <div className="flex items-start gap-4 p-6 border border-content-border hover:border-content-muted transition-colors">
               <svg
-                className="w-8 h-8 flex-shrink-0 mt-0.5 text-content-text"
+                className="w-7 h-7 flex-shrink-0 mt-0.5 text-content-text"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -64,11 +33,37 @@ export default function ContactPage() {
                 />
               </svg>
               <div>
-                <h2 className="text-xl font-bold mb-1 text-content-text">Email</h2>
+                <h2 className="text-xl font-semibold mb-1 text-content-text">Email</h2>
                 <p className="text-content-muted mb-3">
-                  For everything else.
+                  For pricing and inquiries.
                 </p>
                 <ObfuscatedEmail />
+              </div>
+            </div>
+
+            {/* LinkedIn */}
+            <div className="flex items-start gap-4 p-6 border border-content-border hover:border-content-muted transition-colors">
+              <svg
+                className="w-7 h-7 flex-shrink-0 mt-0.5 text-content-text"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+              </svg>
+              <div>
+                <h2 className="text-xl font-semibold mb-1 text-content-text">LinkedIn</h2>
+                <p className="text-content-muted mb-3">
+                  Follow for routine posts about AI with good taste.
+                </p>
+                <a
+                  href="https://www.linkedin.com/in/gregcondit/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-content-text hover:opacity-70 transition-opacity"
+                >
+                  Follow on LinkedIn <span aria-hidden="true">→</span>
+                </a>
               </div>
             </div>
           </div>

@@ -10,46 +10,40 @@ const config: Config = {
     extend: {
       colors: {
         // Header colors (dark)
-        'header-bg': '#333333',
-        'header-logo': '#ebebeb',
-        'header-nav': '#969696',
-        'header-nav-hover': '#ebebeb',
+        'header-bg': '#2a2a2a',
+        'header-logo': '#f5f4f2',
+        'header-nav': '#a8a8a8',
+        'header-nav-hover': '#f5f4f2',
         
-        // Content colors (light)
-        'content-bg': '#ffffff',
-        'content-text': '#000000',
-        'content-muted': '#666666',
-        'content-border': '#e5e5e5',
+        // Content colors (warm)
+        'content-bg': '#faf9f7',
+        'content-text': '#1a1a1a',
+        'content-muted': '#6b6b6b',
+        'content-border': '#e8e6e3',
         
         // Footer (matching header)
-        'footer-bg': '#333333',
-        'footer-text': '#ebebeb',
-        'footer-muted': '#969696',
+        'footer-bg': '#2a2a2a',
+        'footer-text': '#f5f4f2',
+        'footer-muted': '#a8a8a8',
       },
       fontFamily: {
-        sans: [
-          'system-ui',
-          '-apple-system',
-          'BlinkMacSystemFont',
-          'Segoe UI',
-          'sans-serif',
-        ],
+        serif: ['var(--font-serif)', 'Georgia', 'serif'],
       },
       fontSize: {
-        base: '18px',
+        base: '19px',
         small: '14px',
-        h1: '42px',
+        h1: '38px',
         h2: '28px',
       },
       lineHeight: {
-        body: '1.7',
-        heading: '1.2',
+        body: '1.75',
+        heading: '1.25',
       },
       maxWidth: {
-        content: '720px',
+        content: '680px',
       },
       spacing: {
-        'section': '80px',
+        'section': '96px',
         'element': '24px',
         'page-x': '24px',
       },

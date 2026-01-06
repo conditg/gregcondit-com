@@ -5,8 +5,9 @@ import { usePathname } from 'next/navigation';
 import { useState } from 'react';
 
 const navLinks = [
-  { href: '/', label: 'Short Essays' },
+  { href: '/how-i-work', label: 'How I Work' },
   { href: '/about', label: 'About' },
+  { href: '/writing', label: 'Writing' },
   { href: '/contact', label: 'Contact' },
 ];
 
@@ -15,8 +16,8 @@ export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const isActive = (href: string) => {
-    if (href === '/') {
-      return pathname === '/' || pathname.startsWith('/posts');
+    if (href === '/writing') {
+      return pathname === '/writing' || pathname.startsWith('/posts');
     }
     return pathname === href;
   };
