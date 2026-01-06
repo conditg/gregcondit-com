@@ -1,0 +1,7 @@
+# Ignore archive folder
+archive/
+
+# Other files to ignore
+*.md
+!README.md
+
