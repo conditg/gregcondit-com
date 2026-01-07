@@ -9,6 +9,7 @@ export interface PostFrontmatter {
   date: string;
   author: string;
   excerpt: string;
+  order?: number;
 }
 
 export interface Post extends PostFrontmatter {
@@ -45,6 +46,7 @@ export function getPostBySlug(slug: string): Post | null {
       date: data.date || '',
       author: data.author || 'Anonymous',
       excerpt: data.excerpt || '',
+      order: data.order,
       content,
     };
   } catch {
@@ -65,12 +67,21 @@ export function getAllPosts(): PostMeta[] {
         date: post.date,
         author: post.author,
         excerpt: post.excerpt,
+        order: post.order,
       };
     })
     .filter((post): post is PostMeta => post !== null);
 
-  // Sort by date descending
+  // Sort by order field (ascending), falling back to date descending for posts without order
   return posts.sort((a, b) => {
+    // Posts with order come first, sorted by order ascending
+    if (a.order !== undefined && b.order !== undefined) {
+      return a.order - b.order;
+    }
+    // Posts with order come before posts without
+    if (a.order !== undefined) return -1;
+    if (b.order !== undefined) return 1;
+    // Fall back to date descending for posts without order
     if (!a.date || !b.date) return 0;
     return new Date(b.date).getTime() - new Date(a.date).getTime();
   });

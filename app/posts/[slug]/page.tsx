@@ -64,7 +64,7 @@ export default async function PostPage({ params }: PostPageProps) {
       {/* Back Link */}
       <div className="mt-16 pt-8 border-t border-content-border">
         <Link
-          href="/"
+          href="/writing"
           className="text-content-text hover:opacity-70 transition-opacity inline-flex items-center gap-2"
         >
           <span aria-hidden="true">←</span> View all posts

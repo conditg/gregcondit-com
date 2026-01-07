@@ -6,6 +6,7 @@ interface PostCardProps {
   date: string;
   author: string;
   excerpt: string;
+  subtitle?: string;
 }
 
 export default function PostCard({
@@ -14,6 +15,7 @@ export default function PostCard({
   date,
   author,
   excerpt,
+  subtitle,
 }: PostCardProps) {
   return (
     <article className="py-10 first:pt-0 border-b border-content-border last:border-b-0">
@@ -32,9 +34,9 @@ export default function PostCard({
         {date} <span className="mx-2">|</span> {author}
       </p>
 
-      {/* Excerpt */}
+      {/* Subtitle or Excerpt */}
       <p className="text-content-muted italic mb-4 leading-relaxed">
-        {excerpt}
+        {subtitle || excerpt}
       </p>
 
       {/* Continue reading link */}
