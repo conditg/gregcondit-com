@@ -70,7 +70,7 @@ export function getAllPosts(): PostMeta[] {
         order: post.order,
       };
     })
-    .filter((post): post is PostMeta => post !== null);
+    .filter((post): post is NonNullable<typeof post> => post !== null) as PostMeta[];
 
   // Sort by order field (ascending), falling back to date descending for posts without order
   return posts.sort((a, b) => {
